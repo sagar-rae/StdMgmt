@@ -28,13 +28,14 @@ namespace StudentRecordSystem
                 {
                     SqlCommand cmd = new SqlCommand("MGMTSP", con);
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Flag", "AdminCheck");
                     cmd.Parameters.AddWithValue("@AName", NameId.Value);
                     cmd.Parameters.AddWithValue("@Pass", PassId.Value);
                     con.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     if(dr.HasRows)
                     {
-                        Response.Redirect("Home.aspx");
+                        Response.Redirect("Registration.aspx");
                     }
                     else
                     {
