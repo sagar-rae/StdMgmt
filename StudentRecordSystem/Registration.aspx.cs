@@ -4,11 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace StudentRecordSystem
-{
+{   
     public partial class WebForm1 : System.Web.UI.Page
     {
+        string strcon = ConfigurationManager.ConnectionStrings["MGMTDB"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
          
@@ -16,7 +20,47 @@ namespace StudentRecordSystem
 
         protected void Submit_Click(object sender, EventArgs e)
         {
+            SqlConnection con=null;
+            try
+            {
+                using(con=new SqlConnection(strcon))
+                {
+                    con.Open();
+                    SqlCommand comm = new SqlCommand("MGMTSP",con);
+                    comm.CommandType=CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@Flag","Insert");
+                    comm.Parameters.AddWithValue("@StudentID",StdId.Value);
+                    comm.Parameters.AddWithValue("@FullName",FnameId.Value);
+                    comm.Parameters.AddWithValue("@PhoneNumber",PhNumId.Value);
+                    comm.Parameters.AddWithValue("@Email",EmailId.Value);
+                    comm.Parameters.AddWithValue("@Address",AddressId.Value);
+                    comm.Parameters.AddWithValue("@DateOfBirth",DOBId.Value);
+                    comm.Parameters.AddWithValue("@FathersName",FatherId.Value);
+                    comm.Parameters.AddWithValue("@MothersName",MotherId.Value);
+                    int check = comm.ExecuteNonQuery();
 
+                    if(check>0)
+                    {
+                        Response.Write("<script>'Succesfully inserted.'</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>'Error.'</script>");
+                    }
+                    
+                    
+
+                    
+                }
+            }
+            catch(Exception ex)
+            {
+                Response.Write("<script>'"+ex.Message+"'</script>");
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

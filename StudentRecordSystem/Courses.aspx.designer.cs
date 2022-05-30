@@ -11,16 +11,25 @@ namespace StudentRecordSystem
 {
 
 
-    public partial class WebForm2
+    public partial class WebForm3
     {
 
         /// <summary>
-        /// PanelId control.
+        /// CourseId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelId;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText CourseId;
+
+        /// <summary>
+        /// CourseFNId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText CourseFNId;
     }
 }

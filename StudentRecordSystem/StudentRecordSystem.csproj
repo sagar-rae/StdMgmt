@@ -73,6 +73,7 @@
     <Content Include="Web.config" />
     <Content Include="Registration.aspx" />
     <Content Include="RegisteredDetails.aspx" />
+    <Content Include="Courses.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminLogin.aspx.cs">
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="RegisteredDetails.aspx.designer.cs">
       <DependentUpon>RegisteredDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Courses.aspx.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses.aspx.designer.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -7,6 +7,21 @@
     <title></title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script>
+        function Check() {
+            debugger;
+            if (document.getElementById('NameId').value == '') {
+                alert('Please Enter the Name');
+                return false;
+            }
+            if (document.getElementById('PassId').value == '') {
+                alert('Please Enter the Password');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </head>
 <body>
   
@@ -16,7 +31,7 @@
           <input type="text" runat="server" id="NameId" placeholder="Enter Name" class="form-control" /><br />
           <input type="password" runat="server" id="PassId" placeholder="Enter Password" class="form-control"/>     
         <div>
-            <asp:Button runat="server" Text="Login" CssClass="btn btn-primary mt-3 w-100" OnClick="Login_ServerClick" />
+            <asp:Button runat="server" Text="Login" CssClass="btn btn-outline-primary mt-3 w-100" OnClick="Login_ServerClick" OnClientClick="return Check();" />
         </div>
     </form>
         

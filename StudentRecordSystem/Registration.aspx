@@ -45,7 +45,7 @@
           </div>
       </div>
       <div class="row">
-        <asp:Button Text="Submit" CssClass="btn btn-danger col-md-2 mt-3 ms-auto" runat="server" OnClick="Submit_Click" />
+        <asp:Button Text="Submit" CssClass="btn btn-outline-danger col-md-2 mt-3 ms-auto m-3" runat="server" OnClick="Submit_Click" />
       </div>
   </form>
 
