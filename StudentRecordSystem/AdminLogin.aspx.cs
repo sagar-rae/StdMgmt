@@ -34,7 +34,7 @@ namespace StudentRecordSystem
                     SqlDataReader dr = cmd.ExecuteReader();
                     if(dr.HasRows)
                     {
-                        Response.Redirect("Home.aspx");
+                        Response.Redirect("Registration.aspx");
                     }
                     else
                     {
