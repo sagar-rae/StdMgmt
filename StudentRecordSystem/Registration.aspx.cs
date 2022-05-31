@@ -15,9 +15,34 @@ namespace StudentRecordSystem
         string strcon = ConfigurationManager.ConnectionStrings["MGMTDB"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-         
-        }
+            if(Session["user"]!=null)
+            {
+                Response.Write("Hello "+Session["user"].ToString());
+            }
+            else
+            {
+                Response.Redirect("AdminLogin.aspx");
+            }
 
+            if(!IsPostBack)
+            {
+                DropListDataBind();
+            }
+        }
+        void DropListDataBind()
+        {
+            SqlConnection con = new SqlConnection(strcon);
+            SqlDataAdapter sda = new SqlDataAdapter("MGMTSP", con);
+            sda.SelectCommand.CommandType = CommandType.StoredProcedure;
+            sda.SelectCommand.Parameters.AddWithValue("@Flag","DropDownBind");
+            DataTable data = new DataTable();
+            sda.Fill(data);
+            DrpListId.DataSource = data;
+            DrpListId.DataTextField = "CourseName";
+            DrpListId.DataValueField = "Id";
+            DrpListId.DataBind();
+
+        }
         protected void Submit_Click(object sender, EventArgs e)
         {
             SqlConnection con=null;
@@ -41,16 +66,12 @@ namespace StudentRecordSystem
 
                     if(check>0)
                     {
-                        Response.Write("<script>'Succesfully inserted.'</script>");
+                        Response.Write("<script>alert('Succesfully inserted')</script>");
                     }
                     else
                     {
-                        Response.Write("<script>'Error.'</script>");
-                    }
-                    
-                    
-
-                    
+                        Response.Write("<script>alert('Error')</script>");
+                    }                   
                 }
             }
             catch(Exception ex)

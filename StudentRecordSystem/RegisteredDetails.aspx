@@ -4,9 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="row">
-            <h1 class="display-3">Student Registration Table</h1>
+            <form class="border border-2 rounded-3 mt-5 p-3" style="width:1000px; margin:auto">
+            <h3 class="display-3">Student Registration Table</h3><hr />
            <asp:Panel runat="server" ID="PanelId"></asp:Panel>
-            
+            </form>
         </div>
     </div>
 </asp:Content>

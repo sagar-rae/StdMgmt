@@ -45,6 +45,7 @@ namespace StudentRecordSystem
                             table.Append("<td>'" + dr[5] + "'</td>");
                             table.Append("<td>'" + dr[6] + "'</td>");
                             table.Append("<td>'" + dr[7] + "'</td>");
+                            table.Append("</tr>");
                         }
                     }
                     table.Append("</table>");

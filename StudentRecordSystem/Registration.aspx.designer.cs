@@ -51,6 +51,15 @@ namespace StudentRecordSystem
         protected global::System.Web.UI.HtmlControls.HtmlInputText FatherId;
 
         /// <summary>
+        /// DrpListId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DrpListId;
+
+        /// <summary>
         /// PhNumId control.
         /// </summary>
         /// <remarks>

@@ -19,9 +19,9 @@
               <label>Email</label>
               <input type="text" placeholder="Enter your email" class="form-control" runat="server" id="EmailId" />
                <label>Father's Name</label>
-              <input type="text" placeholder="Enter your Father's name" class="form-control" runat="server" id="FatherId" />
+              <input type="text" placeholder="Enter your Father's name" class="fa-caret-down form-control" runat="server" id="FatherId" />
                <label>Course</label>
-              <div class="dropdown">
+             <%-- <div class="dropdown">
                   <button class="btn dropdown-toggle form-control" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Select the course
                   </button>
@@ -30,7 +30,9 @@
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
-              </div>
+              </div>--%>
+              <br />
+              <asp:DropDownList CssClass="col-md-4 col-form-label rounded rounded-3" runat="server" ID="DrpListId"></asp:DropDownList>
           </div>
         
           <div class="col-md-5  ms-auto" >
