@@ -77,6 +77,10 @@
     <Content Include="CoursesView.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Password.aspx" />
+    <Content Include="Subjects.aspx" />
+    <Content Include="SubjectsView.aspx" />
+    <Content Include="Result.aspx" />
+    <Content Include="ResultView.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminLogin.aspx.cs">
@@ -138,6 +142,34 @@
     </Compile>
     <Compile Include="Password.aspx.designer.cs">
       <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects.aspx.cs">
+      <DependentUpon>Subjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subjects.aspx.designer.cs">
+      <DependentUpon>Subjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectsView.aspx.cs">
+      <DependentUpon>SubjectsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubjectsView.aspx.designer.cs">
+      <DependentUpon>SubjectsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultView.aspx.cs">
+      <DependentUpon>ResultView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultView.aspx.designer.cs">
+      <DependentUpon>ResultView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

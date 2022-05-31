@@ -31,20 +31,22 @@ namespace StudentRecordSystem
                     comm.Parameters.AddWithValue("@Flag","Select");
                     SqlDataReader dr = comm.ExecuteReader();
                     table.Append("<table class='table table-hover table-bordered'>");
-                    table.Append("<tr><th>Full Name</th><th>Phone Number</th><th>Email</th><th>Address</th>");
-                    table.Append("<th>Date of Birth</th><th>Father's Name</th><th>Mother's Name</th></tr>");
+                    table.Append("<tr><th>StudentReg.Id</th><th>Full Name</th><th>Phone Number</th><th>Email</th><th>Address</th>");
+                    table.Append("<th>Date of Birth</th><th>Father's Name</th><th>Mother's Name</th><th>Course Name</th></tr>");
                   if(dr.HasRows)
                     {
                         while(dr.Read())
                         {
                             table.Append("<tr>");
-                            table.Append("<td>'"+dr[1]+"'</td>");
-                            table.Append("<td>'" + dr[2] + "'</td>");
-                            table.Append("<td>'" + dr[3] + "'</td>");
-                            table.Append("<td>'" + dr[4] + "'</td>");
-                            table.Append("<td>'" + dr[5] + "'</td>");
-                            table.Append("<td>'" + dr[6] + "'</td>");
-                            table.Append("<td>'" + dr[7] + "'</td>");
+                            table.Append("<td>" + dr[1] + "</td>");
+                            table.Append("<td>" + dr[2] + "</td>");
+                            table.Append("<td>" + dr[3] + "</td>");
+                            table.Append("<td>" + dr[4] + "</td>");
+                            table.Append("<td>" + dr[5] + "</td>");
+                            table.Append("<td>" + dr[6] + "</td>");
+                            table.Append("<td>" + dr[7] + "</td>");
+                            table.Append("<td>" + dr[8] + "</td>");
+                            table.Append("<td>" + dr[9] + "</td>");
                             table.Append("</tr>");
                         }
                     }

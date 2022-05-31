@@ -62,6 +62,7 @@ namespace StudentRecordSystem
                     comm.Parameters.AddWithValue("@DateOfBirth",DOBId.Value);
                     comm.Parameters.AddWithValue("@FathersName",FatherId.Value);
                     comm.Parameters.AddWithValue("@MothersName",MotherId.Value);
+                    comm.Parameters.AddWithValue("@CourseName",DrpListId.SelectedValue);
                     int check = comm.ExecuteNonQuery();
 
                     if(check>0)

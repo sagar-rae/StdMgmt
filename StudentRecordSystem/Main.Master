@@ -92,10 +92,28 @@
                             <li><a class="dropdown-item" href="CoursesView.aspx">View Course</a></li>
                         </ul>
                     </li>
+
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Subjects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Subjects.aspx">Add Subjects</a></li>
+                            <li><a class="dropdown-item" href="SubjectsView.aspx">View Subjects</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">Result
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Result.aspx">Add Result</a></li>
+                            <li><a class="dropdown-item" href="ResultView.aspx">View Result</a></li>
+                        </ul>
+                    </li> 
                 </ul>
                 <ul class="navbar-nav mx-5 mb-2 mb-lg-0">
                     <li class="nav-item dropdown ms-auto">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="Logout.aspx">Log Out</a></li>
