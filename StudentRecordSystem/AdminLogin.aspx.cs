@@ -21,6 +21,8 @@ namespace StudentRecordSystem
 
         protected void Login_ServerClick(object sender, EventArgs e)
         {
+
+            Session["user"] = NameId.Value;
             SqlConnection con = null;
             try
             {

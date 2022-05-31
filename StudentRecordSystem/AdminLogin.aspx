@@ -26,10 +26,13 @@
 <body>
   
        
-         <form id="form1" runat="server" style="width:400px; margin:auto" class="border border-2 p-5 mt-5"  >
+         <form id="form1" runat="server" style="width:400px; margin:auto" class="border border-2 p-5 mt-5 rounded-3"  >
           <h2 class="text-center display-3 border-1">Login</h2>   
           <input type="text" runat="server" id="NameId" placeholder="Enter Name" class="form-control" /><br />
-          <input type="password" runat="server" id="PassId" placeholder="Enter Password" class="form-control"/>     
+          <input type="password" runat="server" id="PassId" placeholder="Enter Password" class="form-control"/>  
+             <div>
+               
+             </div>
         <div>
             <asp:Button runat="server" Text="Login" CssClass="btn btn-outline-primary mt-3 w-100" OnClick="Login_ServerClick" OnClientClick="return Check();" />
         </div>
